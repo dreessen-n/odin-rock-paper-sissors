@@ -1,0 +1,1 @@
+// script.js for odin - rock paper sissors
