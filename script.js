@@ -1,6 +1,6 @@
 // script.js for odin - rock paper sissors
 
-const choices = ['Rock', 'Paper', 'Sissors'];
+const choices = ['rock', 'paper', 'sissors'];
 
 function computerPlay() {
     const choice = choices[Math.floor(Math.random() * choices.length)];
@@ -50,6 +50,11 @@ const result = playRound(playerSelection, computerSelection);
 console.log(result);
 
 // TODO: write game() to play 5 rounds of game and keep score
-
+let playerScore = 0;
+let compScore = 0;
+let 
+for (let i = 0; i < 5; i++) {
+    
+}
 
 //   console.log(playRound(playerSelection, computerSelection));
