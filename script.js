@@ -19,7 +19,7 @@ function playRound(playerSelection, computerSelection) {
     } else if (playerSelection == 'rock') {
         if (computerSelection == 'sissors') {
             return "you win! rock beats sissors"; 
-        } else if (computerselection == 'paper') {
+        } else if (computerSelection == 'paper') {
             return "You Lose! Paper beats Rock";
         }
     } else if (playerSelection == 'paper') {
@@ -40,9 +40,9 @@ function playRound(playerSelection, computerSelection) {
 
 function game() {
     let playerScore = 0;
-    let compScore = 0;  
+    let compScore = 0;
     for (let i = 0; i < 5; i++) {
-
+        let result = playerPlay();
     }
 }  
 
