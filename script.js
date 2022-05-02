@@ -10,7 +10,7 @@ function computerPlay() {
 
 function playRound(playerSelection, computerSelection) {
     if (playerSelection === computerSelection) {
-        console.log('Tie!');
+        console.log('Tie! Play again');
     } else if (playerSelection == 'rock') {
         if (computerSelection == 'sissors') {
            console.log("You Win! Rock beats Sissors") 
