@@ -8,6 +8,11 @@ function computerPlay() {
     return compChoice;
 }
 
+function playerPlay() {
+    const pS = prompt('Please enter either: Rock, Paper or Sissors');
+    return pS.toLowerCase();
+}
+
 function playRound(playerSelection, computerSelection) {
     if (playerSelection === computerSelection) {
         return 'Tie! Play again';
@@ -34,7 +39,11 @@ function playRound(playerSelection, computerSelection) {
 }
 
 function game() {
+    let playerScore = 0;
+    let compScore = 0;  
+    for (let i = 0; i < 5; i++) {
 
+    }
 }  
 
 
@@ -42,19 +51,12 @@ function game() {
 const computerSelection = computerPlay();
 
 // get player selection
-const pS = prompt('Please enter either: Rock, Paper or Sissors');
-    playerSelection = pS.toLowerCase();
+const playerSelection = playerPlay();
 
 // write playRound() to play a round, return string with result
 const result = playRound(playerSelection, computerSelection);
 console.log(result);
 
 // TODO: write game() to play 5 rounds of game and keep score
-let playerScore = 0;
-let compScore = 0;
-let 
-for (let i = 0; i < 5; i++) {
-    
-}
 
 //   console.log(playRound(playerSelection, computerSelection));
