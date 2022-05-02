@@ -42,7 +42,7 @@ function game() {
 const computerSelection = computerPlay();
 
 // get player selection
-const pS = prompt('Please choose: Rock, Paper or Sissors');
+const pS = prompt('Please enter either: Rock, Paper or Sissors');
    playerSelection = pS.toLowerCase();
    console.log(playerSelection); 
 
