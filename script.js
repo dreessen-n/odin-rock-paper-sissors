@@ -17,7 +17,19 @@ function playRound(playerSelection, computerSelection) {
         } else if (computerSelection == 'paper') {
             console.log("You Win! Paper beats Rock")
         }
-    } 
+    } else if (playerSelection == 'paper') {
+        if (computerSelection == 'rock') {
+            console.log("You Win! Paper beats Rock")
+        } else if (computerSelection == 'sissors') {
+            console.log("You Lose! Sissors beats Paper")
+        }
+    } else if (playerSelection == 'sissors') {
+        if (computerSelection == 'rock') {
+            console.log("You Lose! Rock beats Sissors")
+        } else if (computerSelection == 'paper') {
+            console.log("You Win! Sissors beats Paper")
+        }
+    }
     console.log(playerSelection, computerSelection);
   }
  
