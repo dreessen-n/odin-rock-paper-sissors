@@ -46,7 +46,7 @@ const pS = prompt('Please enter either: Rock, Paper or Sissors');
    playerSelection = pS.toLowerCase();
    console.log(playerSelection); 
 
-// TODO: write playRound() to play a round, return string with result
+// write playRound() to play a round, return string with result
 const result = playRound(playerSelection, computerSelection);
 
 // TODO: write game() to play 5 rounds of game and keep score
