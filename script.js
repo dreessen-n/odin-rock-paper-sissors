@@ -13,9 +13,9 @@ function playRound(playerSelection, computerSelection) {
         console.log('Tie!');
     } else if (playerSelection == 'rock') {
         if (computerSelection == 'sissors') {
-           console.log("You Lose! Rock beats Sissors") 
+           console.log("You Win! Rock beats Sissors") 
         } else if (computerSelection == 'paper') {
-            console.log("You Win! Paper beats Rock")
+            console.log("You Lose! Paper beats Rock")
         }
     } else if (playerSelection == 'paper') {
         if (computerSelection == 'rock') {
