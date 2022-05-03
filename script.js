@@ -53,10 +53,13 @@ function game() {
     for (let i = 0; i < 5; i++) {
         let result = playRound(playerSelection, computerSelection);
         let roundScore = roundWinner(result);
-        
+        if (roundScore == 0) {
+            console.log('Tie! Play again');
+        } else if (roundScore == 1) {
+            playerScore += 1;
+    } else {
+            compScore += 1;
     }
-}  
-
 
 // write computerPlay() to get computerSelection
 const computerSelection = computerPlay();
