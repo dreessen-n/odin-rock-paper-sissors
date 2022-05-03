@@ -57,9 +57,18 @@ function game() {
             console.log('Tie! Play again');
         } else if (roundScore == 1) {
             playerScore += 1;
-    } else {
+        } else {
             compScore += 1;
+        }
     }
+    if (playerScore > compScore) {
+        let gap = playerScore - compScore;
+        return 'Player Wins! Beats computer by ' + gap;
+    } else {
+        let gap = compScore - playerScore;
+        return 'Computer Wins! Beats player by ' + gap;
+    }
+}
 
 // write computerPlay() to get computerSelection
 const computerSelection = computerPlay();
@@ -72,5 +81,7 @@ const playerSelection = playerPlay();
 // console.log(result);
 
 // TODO: write game() to play 5 rounds of game and keep score
+const gameWinner = game();
+console.log(gameWinner);
 
-//   console.log(playRound(playerSelection, computerSelection));
+// console.log(playRound(playerSelection, computerSelection));
