@@ -18,7 +18,7 @@ function playRound(playerSelection, computerSelection) {
         return 'Tie! Play again';
     } else if (playerSelection == 'rock') {
         if (computerSelection == 'sissors') {
-            return "you win! rock beats sissors"; 
+            return "you Win! Rock beats Sissors"; 
         } else if (computerSelection == 'paper') {
             return "You Lose! Paper beats Rock";
         }
@@ -35,14 +35,25 @@ function playRound(playerSelection, computerSelection) {
             return "You Win! Sissors beats Paper";
         }
     }
-    console.log(playerSelection, computerSelection);
+}
+
+function roundWinner(result) {
+    if (result == 'Tie, Play again') {
+        return 0
+    } else if (result == 'You Win! Rock beats Sissors' || 'You Win! Paper beats Rock' || 'You Win! Rock beats Sissors') {
+        return 1
+    } else {
+        return 2
+    }
 }
 
 function game() {
     let playerScore = 0;
     let compScore = 0;
     for (let i = 0; i < 5; i++) {
-        let result = playerPlay();
+        let result = playRound(playerSelection, computerSelection);
+        let roundScore = roundWinner(result);
+        
     }
 }  
 
@@ -54,8 +65,8 @@ const computerSelection = computerPlay();
 const playerSelection = playerPlay();
 
 // write playRound() to play a round, return string with result
-const result = playRound(playerSelection, computerSelection);
-console.log(result);
+// const result = playRound(playerSelection, computerSelection);
+// console.log(result);
 
 // TODO: write game() to play 5 rounds of game and keep score
 
