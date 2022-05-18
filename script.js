@@ -1,5 +1,10 @@
 // script.js for odin - rock paper sissors
 
+// *** rewrite using variable instead of strings.
+// const 1 = 'Tie! Play again';
+// const 2 = 'You Win! Rock beats Sissors'
+// ect. til all senarios are cover and then write loops
+
 const choices = ['rock', 'paper', 'sissors'];
 
 function computerPlay() {
@@ -38,9 +43,9 @@ function playRound(playerSelection, computerSelection) {
 }
 
 function roundWinner(result) {
-    if (result == 'Tie, Play again') {
+    if (result === 'Tie, Play again') {
         return 0
-    } else if (result == 'You Win! Rock beats Sissors' || 'You Win! Paper beats Rock' || 'You Win! Rock beats Sissors') {
+    } else if (result === 'You Win! Rock beats Sissors' || 'You Win! Paper beats Rock' || 'You Win! Rock beats Sissors') {
         return 1
     } else {
         return 2
@@ -50,16 +55,26 @@ function roundWinner(result) {
 function game() {
     let playerScore = 0;
     let compScore = 0;
+
     for (let i = 0; i < 5; i++) {
+
+        const computerSelection = computerPlay();
+        const playerSelection = playerPlay();
+        
+        console.log(i);
+        
         let result = playRound(playerSelection, computerSelection);
         let roundScore = roundWinner(result);
+        console.log('round score: ' + roundScore);
+        console.log('result: ' + result);
         if (roundScore == 0) {
-            console.log('Tie! Play again');
+            i -= 1;    
         } else if (roundScore == 1) {
             playerScore += 1;
         } else {
             compScore += 1;
         }
+        alert(result);
     }
     if (playerScore > compScore) {
         let gap = playerScore - compScore;
@@ -71,10 +86,10 @@ function game() {
 }
 
 // write computerPlay() to get computerSelection
-const computerSelection = computerPlay();
+// const computerSelection = computerPlay();
 
 // get player selection
-const playerSelection = playerPlay();
+// const playerSelection = playerPlay();
 
 // write playRound() to play a round, return string with result
 // const result = playRound(playerSelection, computerSelection);
